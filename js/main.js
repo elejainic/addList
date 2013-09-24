@@ -1,6 +1,6 @@
 (function($){
 	  var ListView = Backbone.View.extend({
-    el: $('div'), // attaches `this.el` to an existing element.
+    el: $('body'), // attaches `this.el` to an existing element.
 
        events: {
       'click button#add': 'addItem',
@@ -17,8 +17,8 @@
        
 
       $(this.el).append('<button id="add">Add list item</button>');
-      $(this.el).append('<ul></ul>');
-      $(this.el).append('<button id="remove">Remove item</button>')
+     
+      $(this.el).append('<button id="remove">Remove item</button>');
 
       
     },
@@ -26,15 +26,15 @@
     addItem: function(){
       var input = $( "#oracion" );
       this.counter++;
-      $(this.el).append('<ul><input type="checkbox">' + input.val() + '</ul>')
+      $(this.el).append('<span><ul><input type="checkbox"></span>' + input.val() + '</ul></span>');
     },
 
     removeItem: function(){
       var input = $( "#oracion" );
       this.counter++;
-     $('input type="checkbox"').remove();
+     $('input:checkbox:checked').parent('ul').remove();
        
-    }
+     }
   });
 
 	   var listView = new ListView();
