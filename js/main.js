@@ -9,29 +9,28 @@
 
         initialize: function(){
       _.bindAll(this, 'render'); // fixes loss of context for 'this' within methods
-       this.counter = 0;
        this.render(); // not all views are self-rendering. This one is.
     },
 
-        render: function(){
+    //     render: function(){
        
 
-      $(this.el).append('<button id="add">Add list item</button>');
+    //   // $(this.el).append('<button id="add">Add list item</button>');
      
-      $(this.el).append('<button id="remove">Remove item</button>');
+    //   // $(this.el).append('<button id="remove">Remove item</button>');
 
       
-    },
+    // },
 
     addItem: function(){
       var input = $( "#oracion" );
-      this.counter++;
+      
       $(this.el).append('<span><ul><input type="checkbox"></span>' + input.val() + '</ul></span>');
     },
 
     removeItem: function(){
       var input = $( "#oracion" );
-      this.counter++;
+      
      $('input:checkbox:checked').parent('ul').remove();
        
      }

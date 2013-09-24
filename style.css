@@ -1,0 +1,12 @@
+@font-face
+{
+font-family: 
+src: url('HandVetica.ttf'),
+     url('HandVetica.eot'); /* IE9 */
+} 
+h1
+{
+color: blue;
+font-size: 80px;
+font-family: HandVetica,Helvetica;
+}
