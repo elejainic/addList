@@ -4,9 +4,26 @@ font-family:
 src: url('HandVetica.ttf'),
      url('HandVetica.eot'); /* IE9 */
 } 
+div{
+	margin-left: auto;
+    margin-right: auto
+}
 h1
 {
-color: blue;
-font-size: 80px;
-font-family: HandVetica,Helvetica;
+	
+    color: blue;
+    font-size: 80px;
+    font-family: HandVetica,Helvetica;
+}
+#oracion {
+	font-size:100%;
+	font-family: HandVetica,Helvetica;
+    border:2px solid blue;
+    width: 300px; 
+    height: 40px
+}
+#frase {
+	
+    width: 300px; 
+    height: 40px
 }

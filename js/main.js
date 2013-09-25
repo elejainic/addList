@@ -12,20 +12,10 @@
        this.render(); // not all views are self-rendering. This one is.
     },
 
-    //     render: function(){
-       
-
-    //   // $(this.el).append('<button id="add">Add list item</button>');
-     
-    //   // $(this.el).append('<button id="remove">Remove item</button>');
-
-      
-    // },
-
     addItem: function(){
       var input = $( "#oracion" );
       
-      $(this.el).append('<span><ul><input type="checkbox"></span>' + input.val() + '</ul></span>');
+      $(this.el).append('<span align="center" id="frase"><ul><input  type="checkbox"></span>' + input.val() + '</ul></span>');
     },
 
     removeItem: function(){
