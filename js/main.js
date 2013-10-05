@@ -1,32 +1,34 @@
 (function($){
-	  var ListView = Backbone.View.extend({
-    el: $('body'), // attaches `this.el` to an existing element.
 
-       events: {
-      'click button#add': 'addItem',
-      'click button#remove': 'removeItem'
-    }, 
+  var ListView = Backbone.View.extend({
+  el: $('body'), // attaches `this.el` to an existing element.
+  events: {
+    'click button#add': 'addItem',
+    'click button#remove': 'removeItem'
+  }, 
 
-        initialize: function(){
-      _.bindAll(this, 'render'); // fixes loss of context for 'this' within methods
-       this.render(); // not all views are self-rendering. This one is.
-    },
 
-    addItem: function(){
+  initialize: function(){
+  _.bindAll(this, 'render'); // fixes loss of context for 'this' within methods
+  this.render(); // not all views are self-rendering. This one is.
+  },
+
+
+  addItem: function(){
       var input = $( "#oracion" );
-      
-      $(this.el).append('<span align="center" id="frase"><ul><input  type="checkbox"></span>' + input.val() + '</ul></span>');
-    },
+      $(this.el).append('<ul align="center"><input  type="checkbox">' + input.val() + '</ul></span>');
+  },
 
-    removeItem: function(){
+  
+  removeItem: function(){
       var input = $( "#oracion" );
-      
-     $('input:checkbox:checked').parent('ul').remove();
+      $('input:checkbox:checked').parent('ul').remove();
        
-     }
+  }
   });
 
-	   var listView = new ListView();
+	   
+     var listView = new ListView();
 })(jQuery);
 
 
